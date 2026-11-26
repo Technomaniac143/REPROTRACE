@@ -246,7 +246,7 @@ A verdict without evidence ids is invalid `[P]`.
 
 ## 8. Codespace layout
 
-**Today** `[E 2026-11-26]`: the documents, `CLAUDE.md`, `fixtures/`, `tests/`, and in `src/reprotrace/`: `schemas`, `evidence`, `verification`, `report`, `orchestrator` (recorded audits only) and `cli.py`. Git repository, branch `main`, remote https://github.com/Technomaniac143/REPROTRACE (public).
+**Today** `[E 2026-11-26]`: the documents, `fixtures/`, `tests/`, and in `src/reprotrace/`: `schemas`, `evidence`, `verification`, `report`, `orchestrator` (recorded audits only) and `cli.py`. Git repository, branch `main`, remote https://github.com/Technomaniac143/REPROTRACE (public).
 
 **Target** `[P]`; create folders only when first needed:
 
