@@ -1,0 +1,1340 @@
+{
+  "audit": {
+    "id": "audit-synthetic",
+    "title": "Synthetic example",
+    "synthetic": true
+  },
+  "claims": [
+    {
+      "id": "claim-verified",
+      "quote": "Our proposed CNN achieves 91.37% accuracy on Dataset X.",
+      "source": {
+        "page": 6,
+        "table": "2",
+        "section": null
+      },
+      "metric": "accuracy",
+      "value": 91.37,
+      "unit": "percent",
+      "dataset": "Dataset X (synthetic)",
+      "model": "Example CNN (synthetic)",
+      "confirmed_by_user": true
+    },
+    {
+      "id": "claim-mismatch",
+      "quote": "Our proposed CNN achieves 94.2% accuracy on Dataset X.",
+      "source": {
+        "page": 6,
+        "table": "2",
+        "section": null
+      },
+      "metric": "accuracy",
+      "value": 94.2,
+      "unit": "percent",
+      "dataset": "Dataset X (synthetic)",
+      "model": "Example CNN (synthetic)",
+      "confirmed_by_user": true
+    },
+    {
+      "id": "claim-partial",
+      "quote": "Our proposed CNN achieves 89.64% accuracy on Dataset X.",
+      "source": {
+        "page": 6,
+        "table": "2",
+        "section": null
+      },
+      "metric": "accuracy",
+      "value": 89.64,
+      "unit": "percent",
+      "dataset": "Dataset X (synthetic)",
+      "model": "Example CNN (synthetic)",
+      "confirmed_by_user": true
+    },
+    {
+      "id": "claim-wrong-method",
+      "quote": "Our proposed CNN achieves 93.18% accuracy on Dataset X.",
+      "source": {
+        "page": 6,
+        "table": "2",
+        "section": null
+      },
+      "metric": "accuracy",
+      "value": 93.18,
+      "unit": "percent",
+      "dataset": "Dataset X (synthetic)",
+      "model": "Example CNN (synthetic)",
+      "confirmed_by_user": true
+    },
+    {
+      "id": "claim-copied",
+      "quote": "Our proposed CNN achieves 95.43% accuracy on Dataset X.",
+      "source": {
+        "page": 6,
+        "table": "2",
+        "section": null
+      },
+      "metric": "accuracy",
+      "value": 95.43,
+      "unit": "percent",
+      "dataset": "Dataset X (synthetic)",
+      "model": "Example CNN (synthetic)",
+      "confirmed_by_user": true
+    },
+    {
+      "id": "claim-missing-data",
+      "quote": "Our proposed CNN achieves 90.26% accuracy on Dataset X.",
+      "source": {
+        "page": 6,
+        "table": "2",
+        "section": null
+      },
+      "metric": "accuracy",
+      "value": 90.26,
+      "unit": "percent",
+      "dataset": "Dataset X (synthetic)",
+      "model": "Example CNN (synthetic)",
+      "confirmed_by_user": true
+    },
+    {
+      "id": "claim-failed",
+      "quote": "Our proposed CNN achieves 92.83% accuracy on Dataset X.",
+      "source": {
+        "page": 6,
+        "table": "2",
+        "section": null
+      },
+      "metric": "accuracy",
+      "value": 92.83,
+      "unit": "percent",
+      "dataset": "Dataset X (synthetic)",
+      "model": "Example CNN (synthetic)",
+      "confirmed_by_user": true
+    }
+  ],
+  "specs": [
+    {
+      "id": "spec-verified",
+      "claim_id": "claim-verified",
+      "settings": [
+        {
+          "name": "data split",
+          "status": "stated",
+          "value": "80/20 held-out",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": true
+        },
+        {
+          "name": "preprocessing",
+          "status": "stated",
+          "value": "standardise",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": true
+        },
+        {
+          "name": "training seed",
+          "status": "stated",
+          "value": "7",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": false
+        }
+      ],
+      "criteria": [
+        {
+          "metric": "accuracy",
+          "expected": 91.37,
+          "unit": "percent",
+          "tolerance": 0.5,
+          "direction": "two_sided"
+        }
+      ],
+      "essential_artifacts": [
+        "code",
+        "data"
+      ],
+      "frozen_at": "2026-01-01T09:10:00Z",
+      "content_hash": "eed20f1ffe99f4e79390030b8f186f3fa8a7fb50a6ad32cb3e2b956dab799c50"
+    },
+    {
+      "id": "spec-mismatch",
+      "claim_id": "claim-mismatch",
+      "settings": [
+        {
+          "name": "data split",
+          "status": "stated",
+          "value": "80/20 held-out",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": true
+        },
+        {
+          "name": "preprocessing",
+          "status": "stated",
+          "value": "standardise",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": true
+        },
+        {
+          "name": "training seed",
+          "status": "missing",
+          "value": null,
+          "source": null,
+          "rationale": null,
+          "material": false
+        }
+      ],
+      "criteria": [
+        {
+          "metric": "accuracy",
+          "expected": 94.2,
+          "unit": "percent",
+          "tolerance": 0.5,
+          "direction": "two_sided"
+        }
+      ],
+      "essential_artifacts": [
+        "code",
+        "data"
+      ],
+      "frozen_at": "2026-01-01T09:10:00Z",
+      "content_hash": "bdc23d92745d1f0c22278df23f824a18bf293a1d1c3f0821efda628bfe953f7c"
+    },
+    {
+      "id": "spec-partial",
+      "claim_id": "claim-partial",
+      "settings": [
+        {
+          "name": "data split",
+          "status": "stated",
+          "value": "80/20 held-out",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": true
+        },
+        {
+          "name": "preprocessing",
+          "status": "stated",
+          "value": "standardise",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": true
+        },
+        {
+          "name": "training seed",
+          "status": "stated",
+          "value": "7",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": false
+        }
+      ],
+      "criteria": [
+        {
+          "metric": "accuracy",
+          "expected": 89.64,
+          "unit": "percent",
+          "tolerance": 0.5,
+          "direction": "two_sided"
+        },
+        {
+          "metric": "macro_f1",
+          "expected": 88.15,
+          "unit": "percent",
+          "tolerance": 0.5,
+          "direction": "two_sided"
+        }
+      ],
+      "essential_artifacts": [
+        "code",
+        "data"
+      ],
+      "frozen_at": "2026-01-01T09:10:00Z",
+      "content_hash": "aa6fbaa3074a4f914c7c96b34c492904ca90e4d1da7b13f073def9d05a55cdf9"
+    },
+    {
+      "id": "spec-wrong-method",
+      "claim_id": "claim-wrong-method",
+      "settings": [
+        {
+          "name": "data split",
+          "status": "stated",
+          "value": "80/20 held-out",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": true
+        },
+        {
+          "name": "preprocessing",
+          "status": "stated",
+          "value": "standardise",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": true
+        },
+        {
+          "name": "training seed",
+          "status": "stated",
+          "value": "7",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": false
+        }
+      ],
+      "criteria": [
+        {
+          "metric": "accuracy",
+          "expected": 93.18,
+          "unit": "percent",
+          "tolerance": 0.5,
+          "direction": "two_sided"
+        }
+      ],
+      "essential_artifacts": [
+        "code",
+        "data"
+      ],
+      "frozen_at": "2026-01-01T09:10:00Z",
+      "content_hash": "a30055373da13f4f09e1d7cc19956006567429c5860ec108299cd5c72a51fa26"
+    },
+    {
+      "id": "spec-copied",
+      "claim_id": "claim-copied",
+      "settings": [
+        {
+          "name": "data split",
+          "status": "stated",
+          "value": "80/20 held-out",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": true
+        },
+        {
+          "name": "preprocessing",
+          "status": "stated",
+          "value": "standardise",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": true
+        },
+        {
+          "name": "training seed",
+          "status": "stated",
+          "value": "7",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": false
+        }
+      ],
+      "criteria": [
+        {
+          "metric": "accuracy",
+          "expected": 95.43,
+          "unit": "percent",
+          "tolerance": 0.5,
+          "direction": "two_sided"
+        }
+      ],
+      "essential_artifacts": [
+        "code",
+        "data"
+      ],
+      "frozen_at": "2026-01-01T09:10:00Z",
+      "content_hash": "9a928e1ed25239aabc10c0ed462c3cbc9b0eee68d620073be83cc198c906f377"
+    },
+    {
+      "id": "spec-missing-data",
+      "claim_id": "claim-missing-data",
+      "settings": [
+        {
+          "name": "data split",
+          "status": "stated",
+          "value": "80/20 held-out",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": true
+        },
+        {
+          "name": "preprocessing",
+          "status": "stated",
+          "value": "standardise",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": true
+        },
+        {
+          "name": "training seed",
+          "status": "stated",
+          "value": "7",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": false
+        }
+      ],
+      "criteria": [
+        {
+          "metric": "accuracy",
+          "expected": 90.26,
+          "unit": "percent",
+          "tolerance": 0.5,
+          "direction": "two_sided"
+        }
+      ],
+      "essential_artifacts": [
+        "code",
+        "data"
+      ],
+      "frozen_at": "2026-01-01T09:10:00Z",
+      "content_hash": "4090ad9a4dec86d11c7737918ada84d060a3aa7c285caa16b239d518c3ef3bf2"
+    },
+    {
+      "id": "spec-failed",
+      "claim_id": "claim-failed",
+      "settings": [
+        {
+          "name": "data split",
+          "status": "stated",
+          "value": "80/20 held-out",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": true
+        },
+        {
+          "name": "preprocessing",
+          "status": "stated",
+          "value": "standardise",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": true
+        },
+        {
+          "name": "training seed",
+          "status": "stated",
+          "value": "7",
+          "source": {
+            "page": null,
+            "table": null,
+            "section": "4.1"
+          },
+          "rationale": null,
+          "material": false
+        }
+      ],
+      "criteria": [
+        {
+          "metric": "accuracy",
+          "expected": 92.83,
+          "unit": "percent",
+          "tolerance": 0.5,
+          "direction": "two_sided"
+        }
+      ],
+      "essential_artifacts": [
+        "code",
+        "data"
+      ],
+      "frozen_at": "2026-01-01T09:10:00Z",
+      "content_hash": "6e1f840400275cbe7df0420ba4c5c6ac549e1ba9821b562daa2b6467a3b73653"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "artifact-verified-code",
+      "claim_id": "claim-verified",
+      "kind": "code",
+      "location": "synthetic://verified/code",
+      "availability": "available",
+      "commit": null,
+      "sha256": "797aba3c9018352134f4ac16a156ad2791aa83f491f456ef6ba439d49a2bccdc"
+    },
+    {
+      "id": "artifact-verified-data",
+      "claim_id": "claim-verified",
+      "kind": "data",
+      "location": "synthetic://verified/data",
+      "availability": "available",
+      "commit": null,
+      "sha256": "3380bb62c34c3a05030ccf7f1dc7f876abd7b3d7febfe1db52ff6ddda2754f66"
+    },
+    {
+      "id": "artifact-verified-weights",
+      "claim_id": "claim-verified",
+      "kind": "weights",
+      "location": "synthetic://verified/weights",
+      "availability": "available",
+      "commit": null,
+      "sha256": "ecb35843a618012f13d753fea3f26d62bf0936dcc19aadcd70602374a37661a4"
+    },
+    {
+      "id": "artifact-mismatch-code",
+      "claim_id": "claim-mismatch",
+      "kind": "code",
+      "location": "synthetic://mismatch/code",
+      "availability": "available",
+      "commit": null,
+      "sha256": "29ce1b65e827c60a1ac0a64121926000d1ce6bf74a78d611f21792754c40d840"
+    },
+    {
+      "id": "artifact-mismatch-data",
+      "claim_id": "claim-mismatch",
+      "kind": "data",
+      "location": "synthetic://mismatch/data",
+      "availability": "available",
+      "commit": null,
+      "sha256": "6fa15d54b4777216052a265046bc830f3df7c339cda8bed371365ccced0f86a9"
+    },
+    {
+      "id": "artifact-mismatch-weights",
+      "claim_id": "claim-mismatch",
+      "kind": "weights",
+      "location": "synthetic://mismatch/weights",
+      "availability": "missing",
+      "commit": null,
+      "sha256": null
+    },
+    {
+      "id": "artifact-partial-code",
+      "claim_id": "claim-partial",
+      "kind": "code",
+      "location": "synthetic://partial/code",
+      "availability": "available",
+      "commit": null,
+      "sha256": "043dff9751a52bfcb2899a3dc4b83aba52facfc5749816213c24cbde5f88e175"
+    },
+    {
+      "id": "artifact-partial-data",
+      "claim_id": "claim-partial",
+      "kind": "data",
+      "location": "synthetic://partial/data",
+      "availability": "available",
+      "commit": null,
+      "sha256": "345ba106aef7c953736b3d391e625b4b59b7e022cf93fba92f51f7c5f14c4768"
+    },
+    {
+      "id": "artifact-partial-weights",
+      "claim_id": "claim-partial",
+      "kind": "weights",
+      "location": "synthetic://partial/weights",
+      "availability": "available",
+      "commit": null,
+      "sha256": "3d3f1e1cb21c664b96092a110d68cb99f623d3ab04178fbbbd162160accb4e0c"
+    },
+    {
+      "id": "artifact-wrong-method-code",
+      "claim_id": "claim-wrong-method",
+      "kind": "code",
+      "location": "synthetic://wrong-method/code",
+      "availability": "available",
+      "commit": null,
+      "sha256": "39f5a43361a3dbd3afafd4605f7fab667525e5f4d1cbb89797d025e7d853b0d7"
+    },
+    {
+      "id": "artifact-wrong-method-data",
+      "claim_id": "claim-wrong-method",
+      "kind": "data",
+      "location": "synthetic://wrong-method/data",
+      "availability": "available",
+      "commit": null,
+      "sha256": "76fa81c783c1953097a51036cf848f40329fc7c39ed8ad6b9d48b32925b1c216"
+    },
+    {
+      "id": "artifact-wrong-method-weights",
+      "claim_id": "claim-wrong-method",
+      "kind": "weights",
+      "location": "synthetic://wrong-method/weights",
+      "availability": "available",
+      "commit": null,
+      "sha256": "b81a6f606e511e0a2e1c6b872810ebf819a811660aa4577357235a99403b1b7e"
+    },
+    {
+      "id": "artifact-copied-code",
+      "claim_id": "claim-copied",
+      "kind": "code",
+      "location": "synthetic://copied/code",
+      "availability": "available",
+      "commit": null,
+      "sha256": "6e942f4da6e91a19c904d50707d1cdb714fbe93aef52bbe8872dafd4fd272066"
+    },
+    {
+      "id": "artifact-copied-data",
+      "claim_id": "claim-copied",
+      "kind": "data",
+      "location": "synthetic://copied/data",
+      "availability": "available",
+      "commit": null,
+      "sha256": "f7fadc368673624b3ad40b8b4815b9b0087d30f899ff781759e22abe01672784"
+    },
+    {
+      "id": "artifact-copied-weights",
+      "claim_id": "claim-copied",
+      "kind": "weights",
+      "location": "synthetic://copied/weights",
+      "availability": "available",
+      "commit": null,
+      "sha256": "1f683e7d566a09bcf46cd52f23c540ff31f88334b4938cd475d6e1b280ad626e"
+    },
+    {
+      "id": "artifact-missing-data-code",
+      "claim_id": "claim-missing-data",
+      "kind": "code",
+      "location": "synthetic://missing-data/code",
+      "availability": "available",
+      "commit": null,
+      "sha256": "38faec953659845d8df42c8b26e34c0a2ef09645d58b6421f04c9e070a69031b"
+    },
+    {
+      "id": "artifact-missing-data-data",
+      "claim_id": "claim-missing-data",
+      "kind": "data",
+      "location": "synthetic://missing-data/data",
+      "availability": "missing",
+      "commit": null,
+      "sha256": null
+    },
+    {
+      "id": "artifact-missing-data-weights",
+      "claim_id": "claim-missing-data",
+      "kind": "weights",
+      "location": "synthetic://missing-data/weights",
+      "availability": "available",
+      "commit": null,
+      "sha256": "60a2ab7b3ea499e21d4bfff2529f864893c2a6397c89136f956c3b23798d8f9e"
+    },
+    {
+      "id": "artifact-failed-code",
+      "claim_id": "claim-failed",
+      "kind": "code",
+      "location": "synthetic://failed/code",
+      "availability": "available",
+      "commit": null,
+      "sha256": "a4b9748afd071bd105fd6a2717a47fc5a1ff57ab25ae1975f6752240c387de89"
+    },
+    {
+      "id": "artifact-failed-data",
+      "claim_id": "claim-failed",
+      "kind": "data",
+      "location": "synthetic://failed/data",
+      "availability": "available",
+      "commit": null,
+      "sha256": "2309d4cf04f86fc04ca4a333ad4dbdb28d2e94b3fd406e9475edec3c64880f26"
+    },
+    {
+      "id": "artifact-failed-weights",
+      "claim_id": "claim-failed",
+      "kind": "weights",
+      "location": "synthetic://failed/weights",
+      "availability": "available",
+      "commit": null,
+      "sha256": "465e3b4a15a952a7ea7018bb6f4f31246854f2537497e52f43bf9a700117fcb6"
+    }
+  ],
+  "findings": [
+    {
+      "id": "finding-verified-code-data-split",
+      "claim_id": "claim-verified",
+      "stage": "implementation",
+      "setting": "data split",
+      "result": "match",
+      "location": "train.py:3",
+      "run_id": null,
+      "note": null
+    },
+    {
+      "id": "finding-verified-run-data-split",
+      "claim_id": "claim-verified",
+      "stage": "execution",
+      "setting": "data split",
+      "result": "match",
+      "location": "run.log",
+      "run_id": "run-verified",
+      "note": null
+    },
+    {
+      "id": "finding-verified-code-preprocessing",
+      "claim_id": "claim-verified",
+      "stage": "implementation",
+      "setting": "preprocessing",
+      "result": "match",
+      "location": "train.py:3",
+      "run_id": null,
+      "note": null
+    },
+    {
+      "id": "finding-verified-run-preprocessing",
+      "claim_id": "claim-verified",
+      "stage": "execution",
+      "setting": "preprocessing",
+      "result": "match",
+      "location": "run.log",
+      "run_id": "run-verified",
+      "note": null
+    },
+    {
+      "id": "finding-mismatch-code-data-split",
+      "claim_id": "claim-mismatch",
+      "stage": "implementation",
+      "setting": "data split",
+      "result": "match",
+      "location": "train.py:3",
+      "run_id": null,
+      "note": null
+    },
+    {
+      "id": "finding-mismatch-run-data-split",
+      "claim_id": "claim-mismatch",
+      "stage": "execution",
+      "setting": "data split",
+      "result": "match",
+      "location": "run.log",
+      "run_id": "run-mismatch",
+      "note": null
+    },
+    {
+      "id": "finding-mismatch-code-preprocessing",
+      "claim_id": "claim-mismatch",
+      "stage": "implementation",
+      "setting": "preprocessing",
+      "result": "unknown",
+      "location": "train.py:3",
+      "run_id": null,
+      "note": null
+    },
+    {
+      "id": "finding-mismatch-run-preprocessing",
+      "claim_id": "claim-mismatch",
+      "stage": "execution",
+      "setting": "preprocessing",
+      "result": "unknown",
+      "location": "run.log",
+      "run_id": "run-mismatch",
+      "note": null
+    },
+    {
+      "id": "finding-partial-code-data-split",
+      "claim_id": "claim-partial",
+      "stage": "implementation",
+      "setting": "data split",
+      "result": "match",
+      "location": "train.py:3",
+      "run_id": null,
+      "note": null
+    },
+    {
+      "id": "finding-partial-run-data-split",
+      "claim_id": "claim-partial",
+      "stage": "execution",
+      "setting": "data split",
+      "result": "match",
+      "location": "run.log",
+      "run_id": "run-partial",
+      "note": null
+    },
+    {
+      "id": "finding-partial-code-preprocessing",
+      "claim_id": "claim-partial",
+      "stage": "implementation",
+      "setting": "preprocessing",
+      "result": "match",
+      "location": "train.py:3",
+      "run_id": null,
+      "note": null
+    },
+    {
+      "id": "finding-partial-run-preprocessing",
+      "claim_id": "claim-partial",
+      "stage": "execution",
+      "setting": "preprocessing",
+      "result": "match",
+      "location": "run.log",
+      "run_id": "run-partial",
+      "note": null
+    },
+    {
+      "id": "finding-wrong-method-code-data-split",
+      "claim_id": "claim-wrong-method",
+      "stage": "implementation",
+      "setting": "data split",
+      "result": "mismatch",
+      "location": "train.py:3",
+      "run_id": null,
+      "note": null
+    },
+    {
+      "id": "finding-wrong-method-run-data-split",
+      "claim_id": "claim-wrong-method",
+      "stage": "execution",
+      "setting": "data split",
+      "result": "mismatch",
+      "location": "run.log",
+      "run_id": "run-wrong-method",
+      "note": null
+    },
+    {
+      "id": "finding-wrong-method-code-preprocessing",
+      "claim_id": "claim-wrong-method",
+      "stage": "implementation",
+      "setting": "preprocessing",
+      "result": "match",
+      "location": "train.py:3",
+      "run_id": null,
+      "note": null
+    },
+    {
+      "id": "finding-wrong-method-run-preprocessing",
+      "claim_id": "claim-wrong-method",
+      "stage": "execution",
+      "setting": "preprocessing",
+      "result": "match",
+      "location": "run.log",
+      "run_id": "run-wrong-method",
+      "note": null
+    },
+    {
+      "id": "finding-copied-code-data-split",
+      "claim_id": "claim-copied",
+      "stage": "implementation",
+      "setting": "data split",
+      "result": "match",
+      "location": "train.py:3",
+      "run_id": null,
+      "note": null
+    },
+    {
+      "id": "finding-copied-run-data-split",
+      "claim_id": "claim-copied",
+      "stage": "execution",
+      "setting": "data split",
+      "result": "match",
+      "location": "run.log",
+      "run_id": "run-copied",
+      "note": null
+    },
+    {
+      "id": "finding-copied-code-preprocessing",
+      "claim_id": "claim-copied",
+      "stage": "implementation",
+      "setting": "preprocessing",
+      "result": "match",
+      "location": "train.py:3",
+      "run_id": null,
+      "note": null
+    },
+    {
+      "id": "finding-copied-run-preprocessing",
+      "claim_id": "claim-copied",
+      "stage": "execution",
+      "setting": "preprocessing",
+      "result": "match",
+      "location": "run.log",
+      "run_id": "run-copied",
+      "note": null
+    },
+    {
+      "id": "finding-missing-data-code-data-split",
+      "claim_id": "claim-missing-data",
+      "stage": "implementation",
+      "setting": "data split",
+      "result": "match",
+      "location": "train.py:3",
+      "run_id": null,
+      "note": null
+    },
+    {
+      "id": "finding-missing-data-code-preprocessing",
+      "claim_id": "claim-missing-data",
+      "stage": "implementation",
+      "setting": "preprocessing",
+      "result": "match",
+      "location": "train.py:3",
+      "run_id": null,
+      "note": null
+    },
+    {
+      "id": "finding-failed-code-data-split",
+      "claim_id": "claim-failed",
+      "stage": "implementation",
+      "setting": "data split",
+      "result": "match",
+      "location": "train.py:3",
+      "run_id": null,
+      "note": null
+    },
+    {
+      "id": "finding-failed-code-preprocessing",
+      "claim_id": "claim-failed",
+      "stage": "implementation",
+      "setting": "preprocessing",
+      "result": "match",
+      "location": "train.py:3",
+      "run_id": null,
+      "note": null
+    }
+  ],
+  "approvals": [
+    {
+      "id": "gate1-verified",
+      "gate": "gate1_claims",
+      "approved_hash": "1fed0d78ddd1db3afedd16f6a87bf2f57e1eb5ee35956bdbd8d270a13b2985a1",
+      "approved_at": "2026-01-01T09:00:00Z"
+    },
+    {
+      "id": "gate2-verified",
+      "gate": "gate2_run",
+      "approved_hash": "eed20f1ffe99f4e79390030b8f186f3fa8a7fb50a6ad32cb3e2b956dab799c50",
+      "approved_at": "2026-01-01T09:20:00Z"
+    },
+    {
+      "id": "gate1-mismatch",
+      "gate": "gate1_claims",
+      "approved_hash": "f0f44fbc8824bac1232c0aebb8c84134a146db24d0920953768416c6fab869e3",
+      "approved_at": "2026-01-01T09:00:00Z"
+    },
+    {
+      "id": "gate2-mismatch",
+      "gate": "gate2_run",
+      "approved_hash": "bdc23d92745d1f0c22278df23f824a18bf293a1d1c3f0821efda628bfe953f7c",
+      "approved_at": "2026-01-01T09:20:00Z"
+    },
+    {
+      "id": "gate1-partial",
+      "gate": "gate1_claims",
+      "approved_hash": "8f6aa3aeed8d39d4837987ba982f0bb8ca38841fd43d8e929701c983bf786616",
+      "approved_at": "2026-01-01T09:00:00Z"
+    },
+    {
+      "id": "gate2-partial",
+      "gate": "gate2_run",
+      "approved_hash": "aa6fbaa3074a4f914c7c96b34c492904ca90e4d1da7b13f073def9d05a55cdf9",
+      "approved_at": "2026-01-01T09:20:00Z"
+    },
+    {
+      "id": "gate1-wrong-method",
+      "gate": "gate1_claims",
+      "approved_hash": "ef512dfe42d1ddec34d0b2c0ecef7726949bd2f30c993ec623ff7a30a446ae89",
+      "approved_at": "2026-01-01T09:00:00Z"
+    },
+    {
+      "id": "gate2-wrong-method",
+      "gate": "gate2_run",
+      "approved_hash": "a30055373da13f4f09e1d7cc19956006567429c5860ec108299cd5c72a51fa26",
+      "approved_at": "2026-01-01T09:20:00Z"
+    },
+    {
+      "id": "gate1-copied",
+      "gate": "gate1_claims",
+      "approved_hash": "510237bd083c471b7f68a3409d4354723dd0a7fdd53a64de8a69d07ee685680c",
+      "approved_at": "2026-01-01T09:00:00Z"
+    },
+    {
+      "id": "gate2-copied",
+      "gate": "gate2_run",
+      "approved_hash": "9a928e1ed25239aabc10c0ed462c3cbc9b0eee68d620073be83cc198c906f377",
+      "approved_at": "2026-01-01T09:20:00Z"
+    },
+    {
+      "id": "gate1-missing-data",
+      "gate": "gate1_claims",
+      "approved_hash": "ca18abfddc1748e813480254012f80426f90343e8ea71b2b6831fc06c381446c",
+      "approved_at": "2026-01-01T09:00:00Z"
+    },
+    {
+      "id": "gate1-failed",
+      "gate": "gate1_claims",
+      "approved_hash": "4304ba52af0969e00a68834caf754c5c9793702ec7cf394a5fca6f265cc5d7ab",
+      "approved_at": "2026-01-01T09:00:00Z"
+    },
+    {
+      "id": "gate2-failed",
+      "gate": "gate2_run",
+      "approved_hash": "6e1f840400275cbe7df0420ba4c5c6ac549e1ba9821b562daa2b6467a3b73653",
+      "approved_at": "2026-01-01T09:20:00Z"
+    }
+  ],
+  "runs": [
+    {
+      "id": "run-verified",
+      "claim_id": "claim-verified",
+      "spec_hash": "eed20f1ffe99f4e79390030b8f186f3fa8a7fb50a6ad32cb3e2b956dab799c50",
+      "kind": "original",
+      "command": "python train.py",
+      "image_digest": "synthetic-image",
+      "limits": {
+        "cpus": 2.0,
+        "memory_mb": 2048,
+        "timeout_s": 900,
+        "network_enabled": false
+      },
+      "started_at": "2026-01-01T09:30:00Z",
+      "ended_at": "2026-01-01T09:40:00Z",
+      "exit_code": 0,
+      "failure_cause": null,
+      "log": {
+        "path": "run.log",
+        "sha256": "20c054ec3a1705e8a7533e41bf84f748e62d3f94f28e44bcb83196e18d6685a5",
+        "created_at": "2026-01-01T09:40:00Z"
+      },
+      "input_files": [
+        {
+          "path": "train.py",
+          "sha256": "585f6b4aafa8701a1cac10d205c988080b608d95c11c8aeb36c0a88f6341a402",
+          "created_at": null
+        }
+      ],
+      "files_read": [
+        "train.py"
+      ],
+      "outputs": [
+        {
+          "path": "metrics.json",
+          "sha256": "5bd39b6b941fae22297e39e94fc726b46560f40342f06a5e37f0da4604f8e8cd",
+          "created_at": "2026-01-01T09:39:00Z"
+        }
+      ]
+    },
+    {
+      "id": "run-mismatch",
+      "claim_id": "claim-mismatch",
+      "spec_hash": "bdc23d92745d1f0c22278df23f824a18bf293a1d1c3f0821efda628bfe953f7c",
+      "kind": "original",
+      "command": "python train.py",
+      "image_digest": "synthetic-image",
+      "limits": {
+        "cpus": 2.0,
+        "memory_mb": 2048,
+        "timeout_s": 900,
+        "network_enabled": false
+      },
+      "started_at": "2026-01-01T09:30:00Z",
+      "ended_at": "2026-01-01T09:40:00Z",
+      "exit_code": 0,
+      "failure_cause": null,
+      "log": {
+        "path": "run.log",
+        "sha256": "20c054ec3a1705e8a7533e41bf84f748e62d3f94f28e44bcb83196e18d6685a5",
+        "created_at": "2026-01-01T09:40:00Z"
+      },
+      "input_files": [
+        {
+          "path": "train.py",
+          "sha256": "585f6b4aafa8701a1cac10d205c988080b608d95c11c8aeb36c0a88f6341a402",
+          "created_at": null
+        }
+      ],
+      "files_read": [
+        "train.py"
+      ],
+      "outputs": [
+        {
+          "path": "metrics.json",
+          "sha256": "c3ba90fb8ac747297a3648ba31769cca3011f3821cb55787fab13932e23d0094",
+          "created_at": "2026-01-01T09:39:00Z"
+        }
+      ]
+    },
+    {
+      "id": "run-partial",
+      "claim_id": "claim-partial",
+      "spec_hash": "aa6fbaa3074a4f914c7c96b34c492904ca90e4d1da7b13f073def9d05a55cdf9",
+      "kind": "original",
+      "command": "python train.py",
+      "image_digest": "synthetic-image",
+      "limits": {
+        "cpus": 2.0,
+        "memory_mb": 2048,
+        "timeout_s": 900,
+        "network_enabled": false
+      },
+      "started_at": "2026-01-01T09:30:00Z",
+      "ended_at": "2026-01-01T09:40:00Z",
+      "exit_code": 0,
+      "failure_cause": null,
+      "log": {
+        "path": "run.log",
+        "sha256": "20c054ec3a1705e8a7533e41bf84f748e62d3f94f28e44bcb83196e18d6685a5",
+        "created_at": "2026-01-01T09:40:00Z"
+      },
+      "input_files": [
+        {
+          "path": "train.py",
+          "sha256": "585f6b4aafa8701a1cac10d205c988080b608d95c11c8aeb36c0a88f6341a402",
+          "created_at": null
+        }
+      ],
+      "files_read": [
+        "train.py"
+      ],
+      "outputs": [
+        {
+          "path": "metrics.json",
+          "sha256": "2ec182a7e7d2e08d9ca4143830cc90e8a9207c995791d834b8bfb01f297ead89",
+          "created_at": "2026-01-01T09:39:00Z"
+        }
+      ]
+    },
+    {
+      "id": "run-wrong-method",
+      "claim_id": "claim-wrong-method",
+      "spec_hash": "a30055373da13f4f09e1d7cc19956006567429c5860ec108299cd5c72a51fa26",
+      "kind": "original",
+      "command": "python train.py",
+      "image_digest": "synthetic-image",
+      "limits": {
+        "cpus": 2.0,
+        "memory_mb": 2048,
+        "timeout_s": 900,
+        "network_enabled": false
+      },
+      "started_at": "2026-01-01T09:30:00Z",
+      "ended_at": "2026-01-01T09:40:00Z",
+      "exit_code": 0,
+      "failure_cause": null,
+      "log": {
+        "path": "run.log",
+        "sha256": "20c054ec3a1705e8a7533e41bf84f748e62d3f94f28e44bcb83196e18d6685a5",
+        "created_at": "2026-01-01T09:40:00Z"
+      },
+      "input_files": [
+        {
+          "path": "train.py",
+          "sha256": "585f6b4aafa8701a1cac10d205c988080b608d95c11c8aeb36c0a88f6341a402",
+          "created_at": null
+        }
+      ],
+      "files_read": [
+        "train.py"
+      ],
+      "outputs": [
+        {
+          "path": "metrics.json",
+          "sha256": "16680ab65a2fdf678fae9cf3f1b19204b6612aa81d0d8a66b6560b8c4a0fff54",
+          "created_at": "2026-01-01T09:39:00Z"
+        }
+      ]
+    },
+    {
+      "id": "run-copied",
+      "claim_id": "claim-copied",
+      "spec_hash": "9a928e1ed25239aabc10c0ed462c3cbc9b0eee68d620073be83cc198c906f377",
+      "kind": "original",
+      "command": "python train.py",
+      "image_digest": "synthetic-image",
+      "limits": {
+        "cpus": 2.0,
+        "memory_mb": 2048,
+        "timeout_s": 900,
+        "network_enabled": false
+      },
+      "started_at": "2026-01-01T09:30:00Z",
+      "ended_at": "2026-01-01T09:40:00Z",
+      "exit_code": 0,
+      "failure_cause": null,
+      "log": {
+        "path": "run.log",
+        "sha256": "20c054ec3a1705e8a7533e41bf84f748e62d3f94f28e44bcb83196e18d6685a5",
+        "created_at": "2026-01-01T09:40:00Z"
+      },
+      "input_files": [
+        {
+          "path": "train.py",
+          "sha256": "585f6b4aafa8701a1cac10d205c988080b608d95c11c8aeb36c0a88f6341a402",
+          "created_at": null
+        },
+        {
+          "path": "README.md",
+          "sha256": "56a80bc384eddd8c69018c6fae3e6c2a85a45b0f07c997fead4f81232daad829",
+          "created_at": null
+        },
+        {
+          "path": "saved_results.json",
+          "sha256": "347a37ea0da34bcc97d798ba5bfe3f1533058c30fe9e491ce3a5eb765e882ee4",
+          "created_at": null
+        }
+      ],
+      "files_read": [
+        "train.py",
+        "saved_results.json"
+      ],
+      "outputs": [
+        {
+          "path": "metrics.json",
+          "sha256": "347a37ea0da34bcc97d798ba5bfe3f1533058c30fe9e491ce3a5eb765e882ee4",
+          "created_at": "2026-01-01T09:39:00Z"
+        }
+      ]
+    },
+    {
+      "id": "run-failed",
+      "claim_id": "claim-failed",
+      "spec_hash": "6e1f840400275cbe7df0420ba4c5c6ac549e1ba9821b562daa2b6467a3b73653",
+      "kind": "original",
+      "command": "python train.py",
+      "image_digest": "synthetic-image",
+      "limits": {
+        "cpus": 2.0,
+        "memory_mb": 2048,
+        "timeout_s": 900,
+        "network_enabled": false
+      },
+      "started_at": "2026-01-01T09:30:00Z",
+      "ended_at": "2026-01-01T09:40:00Z",
+      "exit_code": 1,
+      "failure_cause": "dependency",
+      "log": {
+        "path": "run.log",
+        "sha256": "3e07c39c385e510c1bfc55dff67be33eb46c7359fa8edd7348fd2de4af44f47c",
+        "created_at": "2026-01-01T09:40:00Z"
+      },
+      "input_files": [
+        {
+          "path": "train.py",
+          "sha256": "585f6b4aafa8701a1cac10d205c988080b608d95c11c8aeb36c0a88f6341a402",
+          "created_at": null
+        }
+      ],
+      "files_read": [
+        "train.py"
+      ],
+      "outputs": []
+    }
+  ],
+  "observations": [
+    {
+      "id": "obs-verified-accuracy",
+      "run_id": "run-verified",
+      "metric": "accuracy",
+      "value": 91.52,
+      "unit": "percent",
+      "capture": "output_file",
+      "source_path": "metrics.json",
+      "source_sha256": "5bd39b6b941fae22297e39e94fc726b46560f40342f06a5e37f0da4604f8e8cd"
+    },
+    {
+      "id": "obs-mismatch-accuracy",
+      "run_id": "run-mismatch",
+      "metric": "accuracy",
+      "value": 92.1,
+      "unit": "percent",
+      "capture": "output_file",
+      "source_path": "metrics.json",
+      "source_sha256": "c3ba90fb8ac747297a3648ba31769cca3011f3821cb55787fab13932e23d0094"
+    },
+    {
+      "id": "obs-partial-accuracy",
+      "run_id": "run-partial",
+      "metric": "accuracy",
+      "value": 89.71,
+      "unit": "percent",
+      "capture": "output_file",
+      "source_path": "metrics.json",
+      "source_sha256": "2ec182a7e7d2e08d9ca4143830cc90e8a9207c995791d834b8bfb01f297ead89"
+    },
+    {
+      "id": "obs-partial-macro_f1",
+      "run_id": "run-partial",
+      "metric": "macro_f1",
+      "value": 84.02,
+      "unit": "percent",
+      "capture": "output_file",
+      "source_path": "metrics.json",
+      "source_sha256": "2ec182a7e7d2e08d9ca4143830cc90e8a9207c995791d834b8bfb01f297ead89"
+    },
+    {
+      "id": "obs-wrong-method-accuracy",
+      "run_id": "run-wrong-method",
+      "metric": "accuracy",
+      "value": 93.18,
+      "unit": "percent",
+      "capture": "output_file",
+      "source_path": "metrics.json",
+      "source_sha256": "16680ab65a2fdf678fae9cf3f1b19204b6612aa81d0d8a66b6560b8c4a0fff54"
+    },
+    {
+      "id": "obs-copied-accuracy",
+      "run_id": "run-copied",
+      "metric": "accuracy",
+      "value": 95.43,
+      "unit": "percent",
+      "capture": "output_file",
+      "source_path": "metrics.json",
+      "source_sha256": "347a37ea0da34bcc97d798ba5bfe3f1533058c30fe9e491ce3a5eb765e882ee4"
+    }
+  ]
+}

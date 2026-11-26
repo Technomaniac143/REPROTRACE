@@ -1,0 +1,14 @@
+# Anchored on purpose: "evidence/" unanchored would also hide src/reprotrace/evidence/.
+/workspace/
+/evidence/
+
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+/dist/
+/build/
+
+# Local chat exports, not project files
+/2026-*-*.txt

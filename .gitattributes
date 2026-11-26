@@ -1,0 +1,2 @@
+# Fixture files are hashed, so line endings must not be rewritten.
+fixtures/** -text
