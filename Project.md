@@ -246,7 +246,7 @@ A verdict without evidence ids is invalid `[P]`.
 
 ## 8. Codespace layout
 
-**Today** `[E 2026-11-26]`: the documents, `CLAUDE.md`, `fixtures/`, `tests/`, and in `src/reprotrace/`: `schemas`, `evidence`, `verification`, `report`, `orchestrator` (recorded audits only) and `cli.py`. Not a git repository.
+**Today** `[E 2026-11-26]`: the documents, `CLAUDE.md`, `fixtures/`, `tests/`, and in `src/reprotrace/`: `schemas`, `evidence`, `verification`, `report`, `orchestrator` (recorded audits only) and `cli.py`. Git repository, branch `main`, remote https://github.com/Technomaniac143/REPROTRACE (public).
 
 **Target** `[P]`; create folders only when first needed:
 
@@ -344,3 +344,4 @@ Append only. Newest last.
 | 2026-11-26 | Verdict steps 0 and 6 added; every integrity check must pass, and inconclusive does not count as a pass | `[P]`, tasks 1.6 and 1.7; needs the user (Plan.md Q7) |
 | 2026-11-26 | Integrity checks and verdicts are computed by the audit and never accepted from input | `[P]`, task 1.8 |
 | 2026-11-26 | Work paused after iteration 1; iteration 2, Q7 and Q8 remain undecided | User instruction |
+| 2026-11-26 | Git initialised; pushed to public GitHub repo Technomaniac143/REPROTRACE; chat exports git-ignored | User instruction |

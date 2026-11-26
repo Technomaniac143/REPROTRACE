@@ -44,7 +44,7 @@ Rewrite at the end of each session.
 
 - **Paused:** the user stopped work on 2026-11-26. Do not start iteration 2 until they say so.
 - **Done:** iteration 1, tasks 1.1 to 1.8 (section 8). No task is in progress.
-- **Exists:** the verification core in `src/reprotrace`; at the pause, `uv run pytest -q` gave 145 passed and `uv run reprotrace audit fixtures/synthetic` worked. All evidence is synthetic. No git repository, so there is no history to roll back to.
+- **Exists:** the verification core in `src/reprotrace`; at the pause, `uv run pytest -q` gave 145 passed and `uv run reprotrace audit fixtures/synthetic` worked. All evidence is synthetic. Git: `main` at https://github.com/Technomaniac143/REPROTRACE (public).
 - **To resume:** (1) run the tests; (2) get the user's answer on the iteration 2 table (section 5), Q7 and Q8; (3) start task 2.1. Tasks 2.1 to 2.6 need no LLM key; 2.7 needs Q8; 2.8 needs B2.
 - **Watch out:** Docker was still not found at the pause, so B1 stands for iteration 4. The Bash tool failed on large multi-file heredocs; write files with the file tools.
 - **Process slips in this session, not to repeat:** `.venv` and one generated synthetic `evidence/` output were deleted without asking; tasks 1.2 to 1.8 were not marked `DOING` one at a time.
@@ -71,7 +71,7 @@ Rewrite at the end of each session.
 | Q3 | Fix Docker here or use another machine? | Continue with work that needs no sandbox |
 | Q4 | Accept the defaults for T1 to T8 in `Project.md` section 11? T3 (verdicts) matters most | Use the defaults, marked provisional |
 | Q5 | How is work split among the four members? | Single task queue |
-| Q6 | Initialise git here, and is there a GitHub remote? | No git until approved |
+| Q6 | Initialise git here, and is there a GitHub remote? | Answered 2026-11-26: public repo https://github.com/Technomaniac143/REPROTRACE |
 | Q7 | Accept the verdict rules added in iteration 1 (`Project.md` section 6, steps 0 and 6, and decision log)? | Use them, marked provisional |
 | Q8 | Which two or three openly licensed papers may be hand-labelled for task 2.7? | Agent prepares a shortlist |
 
