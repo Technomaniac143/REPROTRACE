@@ -44,6 +44,7 @@ Rewrite at the end of each session.
 
 - **Paused:** the user stopped work on 2026-11-26. Do not start iteration 2 until they say so.
 - **Done:** iteration 1, tasks 1.1 to 1.8 (section 8). No task is in progress.
+- **MVP prototype (2026-11-26, user request):** `src/reprotrace/ui/dashboard.py` renders an offline HTML dashboard from the ledger; every audit now writes `dashboard.html` next to `report.md`. `README.md` added with two screenshots in `docs/screenshots/` (synthetic bundle, captured with headless Chrome). `uv run pytest -q` gives 149 passed.
 - **Exists:** the verification core in `src/reprotrace`; at the pause, `uv run pytest -q` gave 145 passed and `uv run reprotrace audit fixtures/synthetic` worked. All evidence is synthetic. Git: `main` at https://github.com/Technomaniac143/REPROTRACE (public).
 - **To resume:** (1) run the tests; (2) get the user's answer on the iteration 2 table (section 5), Q7 and Q8; (3) start task 2.1. Tasks 2.1 to 2.6 need no LLM key; 2.7 needs Q8; 2.8 needs B2.
 - **Watch out:** Docker was still not found at the pause, so B1 stands for iteration 4. The Bash tool failed on large multi-file heredocs; write files with the file tools.

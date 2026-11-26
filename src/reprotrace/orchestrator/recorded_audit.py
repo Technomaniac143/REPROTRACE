@@ -26,6 +26,7 @@ from ..schemas import (
     RunRecord,
     Verdict,
 )
+from ..ui.dashboard import render_dashboard
 from ..verification.integrity import run_checks
 from ..verification.verdict import CaseFile, decide
 
@@ -74,6 +75,7 @@ class AuditBundle(Record):
 class AuditResult:
     verdicts: tuple[Verdict, ...]
     report_path: Path
+    dashboard_path: Path
 
 
 def run_recorded_audit(bundle_dir: Path, out: Path) -> AuditResult:
@@ -111,7 +113,9 @@ def run_recorded_audit(bundle_dir: Path, out: Path) -> AuditResult:
             raise AuditError("ledger failed verification: " + "; ".join(problems))
         report_path = out / "report.md"
         report_path.write_text(render_report(ledger), encoding="utf-8", newline="\n")
-    return AuditResult(tuple(verdicts), report_path)
+        dashboard_path = out / "dashboard.html"
+        dashboard_path.write_text(render_dashboard(ledger), encoding="utf-8", newline="\n")
+    return AuditResult(tuple(verdicts), report_path, dashboard_path)
 
 
 def _case_file(bundle: AuditBundle, claim: Claim, bundle_dir: Path) -> CaseFile:

@@ -30,4 +30,5 @@ def main(argv: list[str] | None = None) -> int:
     for verdict in result.verdicts:
         print(f"{verdict.claim_id}: {verdict.status} ({', '.join(verdict.reason_codes)})")
     print(f"report: {result.report_path}")
+    print(f"dashboard: {result.dashboard_path}")
     return 0

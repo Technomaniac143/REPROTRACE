@@ -246,7 +246,7 @@ A verdict without evidence ids is invalid `[P]`.
 
 ## 8. Codespace layout
 
-**Today** `[E 2026-11-26]`: the documents, `fixtures/`, `tests/`, and in `src/reprotrace/`: `schemas`, `evidence`, `verification`, `report`, `orchestrator` (recorded audits only) and `cli.py`. Git repository, branch `main`, remote https://github.com/Technomaniac143/REPROTRACE (public).
+**Today** `[E 2026-11-26]`: the documents, `fixtures/`, `tests/`, and in `src/reprotrace/`: `schemas`, `evidence`, `verification`, `report`, `orchestrator` (recorded audits only), `ui` (HTML dashboard) and `cli.py`; `README.md` with `docs/screenshots/`. Git repository, branch `main`, remote https://github.com/Technomaniac143/REPROTRACE (public).
 
 **Target** `[P]`; create folders only when first needed:
 
@@ -279,7 +279,7 @@ D:\REPOTRACE
 | Install from the lockfile | `uv sync --locked` |
 | All tests | `uv run pytest -q` |
 | One file / one test | `uv run pytest tests/test_verdict.py` / `uv run pytest -k test_verified` |
-| Synthetic audit | `uv run reprotrace audit fixtures/synthetic` (writes to a new `evidence/audit-<time>/`) |
+| Synthetic audit | `uv run reprotrace audit fixtures/synthetic` (writes `report.md` and `dashboard.html` to a new `evidence/audit-<time>/`) |
 | Rebuild fixtures | `uv run python fixtures/build_synthetic.py` |
 
 ---
@@ -345,3 +345,4 @@ Append only. Newest last.
 | 2026-11-26 | Integrity checks and verdicts are computed by the audit and never accepted from input | `[P]`, task 1.8 |
 | 2026-11-26 | Work paused after iteration 1; iteration 2, Q7 and Q8 remain undecided | User instruction |
 | 2026-11-26 | Git initialised; pushed to public GitHub repo Technomaniac143/REPROTRACE; chat exports git-ignored | User instruction |
+| 2026-11-26 | MVP prototype: offline HTML dashboard rendered from the ledger (no new dependency, no network, untrusted text escaped); README with screenshots | User instruction |
